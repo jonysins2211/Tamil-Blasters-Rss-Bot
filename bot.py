@@ -159,7 +159,7 @@ class MN_Bot(Client):
                 logging.error(f"Error in auto_post_torrents: {e}")
 
             # wait 15 minutes before next check
-            await asyncio.sleep(900)
+            await asyncio.sleep(300)
 
     async def start(self):
         await super().start()
@@ -179,4 +179,5 @@ class MN_Bot(Client):
 if __name__ == "__main__":
     threading.Thread(target=run_flask, daemon=True).start()
     MN_Bot().run()
+
 
